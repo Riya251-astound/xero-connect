@@ -1,0 +1,14 @@
+<apex:page controller="XeroCallbackController" action="{!handleCallback}" showHeader="true" sidebar="false" docType="html-5.0" title="Xero OAuth Callback">
+    <div style="padding: 1rem; font-family: sans-serif;">
+        <h1>Xero connection</h1>
+        <apex:outputPanel rendered="{!NOT(ISBLANK(errorMessage))}">
+            <p style="color: #b00020;">{!errorMessage}</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!NOT(ISBLANK(message))}">
+            <p style="color: #0d47a1;">{!message}</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!AND(ISBLANK(errorMessage), ISBLANK(message))}">
+            <p>Processing…</p>
+        </apex:outputPanel>
+    </div>
+</apex:page>

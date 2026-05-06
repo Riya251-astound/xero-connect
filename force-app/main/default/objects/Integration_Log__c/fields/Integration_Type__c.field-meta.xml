@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Type__c</fullName>
+    <label>Integration Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Xero</fullName>
+                <default>false</default>
+                <label>Xero</label>
+            </value>
+            <value>
+                <fullName>Xero Webhook</fullName>
+                <default>false</default>
+                <label>Xero Webhook</label>
+            </value>
+            <value>
+                <fullName>Xero Webhook Handler</fullName>
+                <default>false</default>
+                <label>Xero Webhook Handler</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

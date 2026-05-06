@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Xero Invoice Actions" icon-name="standard:invoice">
+        <div class="slds-p-around_small">
+            <template if:true={isBusy}>
+                <div class="slds-is-relative slds-m-bottom_x-small">
+                    <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </div>
+            </template>
+            <div class="slds-grid slds-gutters_x-small">
+                <div class="slds-col">
+                    <lightning-button
+                        variant="neutral"
+                        label="View Invoice PDF"
+                        icon-name="utility:preview"
+                        class="slds-size_full"
+                        onclick={handleViewPdf}
+                        disabled={disableView}
+                    ></lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button
+                        variant="brand"
+                        label="Download Invoice PDF"
+                        icon-name="utility:download"
+                        class="slds-size_full"
+                        onclick={handleDownloadPdf}
+                        disabled={disableDownload}
+                    ></lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button
+                        variant="neutral"
+                        label="Email PDF to Account Owner"
+                        icon-name="utility:email"
+                        class="slds-size_full"
+                        onclick={handleEmailPdf}
+                        disabled={disableEmail}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
